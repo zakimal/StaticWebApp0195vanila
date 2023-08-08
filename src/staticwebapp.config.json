@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "redirect": "/login.html"
+    },
+    {
+      "route": "/login.html",
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/page2.html"
+    },
+    {
+      "route": "/.auth/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+  }
+}
