@@ -11,6 +11,10 @@
     {
       "route": "/.auth/*",
       "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
     }
   ],
   "navigationFallback": {
